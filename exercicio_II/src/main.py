@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 linksVisitados = []
 index = 0
 requests_cache.install_cache('myCache')
-url = "https://kogama.com.br/"
+url = "https://www.bbc.com/portuguese"
 class BancoDeDados:
     # urlDoSite: str
     # numeroDeTermos: int
@@ -128,7 +128,7 @@ def search(key: str, url: str, depth: int):
     arrayDeDados.append(myBancoDeDados)
 
 def main():
-    search('game', url, 1)
+    search('news', url, 1)
 
     newArrayDeDados = sorted(arrayDeDados, key= lambda dado : dado.calcularPontuacao(), reverse= True)
     
