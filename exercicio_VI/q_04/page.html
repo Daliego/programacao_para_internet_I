@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>
+      Diferença entre as propriedades textContent e innerHTML dos elementos HTML
+    </title>
+  </head>
+  <body>
+    <h1>Exemplo de uso do DOM</h1>
+    <p id="textContent">
+        Tag parágrafo para exemplo de textContent <br><br>
+        "Esse parágrafo é com textContent,pois ele não mostra tags que se encontrem dentro de outras"
+    </p>
+    <p id="innerHTML">
+        <p>
+            Tag parágrafo para exemplo de innert HTML <br><br>
+
+        Não, na verdade esse parágrafo é com innerHTML, pois ele mostra não só o conteúdo da tag como também as tags em si 
+        dentro dele.
+        </p>
+    </p>
+    <button id="botao">Clique aqui para mostrar o textContent</button>
+    <button id="botao2">Clique aqui para mostrar o innerHTML</button>
+    <div>
+        <div></div>
+        <span id="modifique_me">Texto pra ser modificado, aperte o botao</span>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
