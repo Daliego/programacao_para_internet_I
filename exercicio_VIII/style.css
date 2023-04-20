@@ -1,0 +1,81 @@
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(#b3cce2, #D9CCC1);
+}
+
+p {
+    font-size: 1.0rem;
+    color: #024059;
+}
+
+.dates {
+    text-align: left;
+    color: darkslategray;
+    font-style: italic;
+    font-size: .8rem;
+}
+
+.authorLeft {
+    padding-left: 35px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.authors {
+    text-align: right;
+    color: darkslategray;
+    font-style: italic;
+}
+
+/* 
+Não sei que fonte é essa */
+.motivacionalParagrath {
+    padding-left: 35px;
+    /* font-family: 'tilt-neon'; */
+    /* justificar o conteudo 
+    justify-content: ;*/
+}
+
+
+.helloDiferenciado {
+    display: inline-block;
+}
+
+.h2_text {
+    font-size: 1.5rem;
+}
+
+#h1_title {
+    font-size: 3rem;
+    letter-spacing: .5rem;
+    text-align: center;
+}
+
+.Htexts {
+    color: #D9CCC1;
+}
+
+.textBackground {
+    background-color: #005eb0;
+}
+
+.riscar {
+    position: relative;
+}
+
+.riscar::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 1px solid;
+    border-color: inherit;
+
+    -webkit-transform:rotate(-5deg);
+    -moz-transform:rotate(-5deg);
+    -ms-transform:rotate(-5deg);
+    -o-transform:rotate(-5deg);
+    transform:rotate(-5deg);
+}
