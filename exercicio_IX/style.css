@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+    font-size: 18px;
+}
+
+.blackBackgroud {
+    background-color: black;
+}
+
+.leftPart {
+    float: left;
+    width: 88%;
+    height: 100%;
+    background-color: black;
+}
+
+.rightPart {
+    float: right;
+    width: 8%;
+    height: 600px;
+    background-image: url(assets/sideActor/rightNeal.png);
+    background-repeat: repeat-y;
+    background-color: black;
+}
+
+h1 {
+    color: #eeeeee;
+    font-style: italic;
+    background-image: url(assets/background_images/header_background.webp)
+}
+
+footer {
+    text-align: right;
+}
+
+.actorImage {
+    width: 50px;
+}
+
+p {
+    color: #42C920;
+    width: 88%;
+    line-break: 1.2;
+}
+
+/* .sideImage {
+    float: right;
+} */
+
+.sideActor {
+    width: 8%;
+    height:500px;
+    float: right;
+    background-image: url(assets/sideActor/rightNeal.png);
+    background-repeat: repeat-y;
+    /* position: relative;
+    left: 650px;
+    top: -500px; */
+}
