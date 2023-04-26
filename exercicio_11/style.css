@@ -1,0 +1,11 @@
+body {
+    background-color: grey;
+    font-style: italic;
+    text-align: center;
+    color: rgb(45, 41, 41);
+}
+
+.placa {
+    width: 20px;
+}
+
