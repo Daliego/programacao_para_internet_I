@@ -1,18 +1,42 @@
-function handleChange() {
-    const checkBoxes = document.getElementById('allCheckBoxes').children
-    console.log(checkBoxes)
-    for (let i = 0; i < checkBoxes.length; i++) {
-        if (checkBoxes[i].nodeName == 'INPUT') {
-            if (checkBoxes[i].checked == true) {
-                document.getElementById('result').innerHTML = 'Um checkBox foi marcado'
-                return;
-            }
+function toUpperCase(text) {
+    if (!isNaN(text)) {
+        alert("A character wasn't typed")
+        return 'Be smarter next timer'
+    } else {
+        let newText = ''
+        for (let i = 0; i < text.length; i++) {
+            newText += text[i].toUpperCase()
         }
     }
-    document.getElementById('result').innerHTML = 'Nenhum checkBox foi marcado'
+}
+
+function matchOption(event, text) {
+    let option = event.target.value
+    if (option == 'maiusculo') {
+        document.getElementById('result').innerHTML = text.toUpperCase()
+    } else if (option == 'minusculo') {
+        document.getElementById('result').innerHTML = text.toLowerCase()
+
+    }
+}
+
+function optionReset(event) {
+    let option = document.getElementById('selection')
+    document.getElementById('selection').
+    console.log(option)
+}
+
+function handleChange(event) {
+    const text = document.getElementById('text').value
+    if (text == '') {
+        alert("Você não digitou texto nenhum")
+        //optionReset(event)
+    } else {
+        matchOption(event, text)
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const checkBoxes = document.getElementById('allCheckBoxes')
-    checkBoxes.addEventListener('change', (event, allCheckBoxes) => handleChange())
+    const selectOption = document.getElementById('selection')
+    selectOption.addEventListener('change', (event) => handleChange(event))
 })

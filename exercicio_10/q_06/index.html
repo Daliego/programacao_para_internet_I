@@ -2,22 +2,16 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Pesquisador e mostrador de imagens</title>
+        <title>Tornar frase maiuscula ou minúscula</title>
     </head>
     <body>
-        <fieldset>
-            <legend>
-                Marque ou não um checkbox:
-            </legend> 
-            <div id="allCheckBoxes">
-                <label for="checkbox">Transformar em ASC</label>
-                <input type="checkbox" id="check1">
-                <label for="checkbox"></label>
-                <input type="checkbox" id="check2">
-                <label for="checkbox">check3</label>
-                <input type="checkbox" id="check3">
-            </div>
-        </fieldset>
+        <label for="text">Digite um texto:</label>
+        <input id="text">
+        <select id="selection">
+            <option value="">Escolha uma opção</option>
+            <option value="maiusculo">Maiúsculo</option>
+            <option value="minusculo">Minúsculo</option>
+        </select>
         <div id="result">
             Nada foi preenchido
         </div>
