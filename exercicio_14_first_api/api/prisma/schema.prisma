@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Blog {
+  id        Int      @id 
+  title     String
+  text      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  posts     Post[]   @relation("blog_posts")
+}
+
+model Post {
+  id         Int        @id 
+  title      String
+  text       String?
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+  likes      Int        @default(0)
+  comments   Comments[] @relation("post_comments")
+  microblog  Blog?      @relation("blog_posts", fields: [microblogId], references: [id])
+  microblogId Int?
+}
+
+model Comments {
+  id         Int        @id 
+  text       String?
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+  likes      Int        @default(0)
+  post       Post       @relation("post_comments", fields: [postId], references: [id])
+  postId     Int
+}
