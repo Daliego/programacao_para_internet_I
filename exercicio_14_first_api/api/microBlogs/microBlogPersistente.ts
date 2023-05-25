@@ -131,7 +131,7 @@ export class MicroblogPersistente {
                 id: 1,
             },
         }).comments
-        return post
+        return post;
     }
 }
 

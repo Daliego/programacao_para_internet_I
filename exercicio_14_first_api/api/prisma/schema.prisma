@@ -13,9 +13,6 @@ datasource db {
 model Blog {
   id        Int      @id 
   title     String
-  text      String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
   posts     Post[]   @relation("blog_posts")
 }
 
@@ -23,10 +20,9 @@ model Post {
   id         Int        @id 
   title      String
   text       String?
-  createdAt  DateTime   @default(now())
-  updatedAt  DateTime   @updatedAt
   likes      Int        @default(0)
   comments   Comments[] @relation("post_comments")
+  date       DateTime   @default(now())
   microblog  Blog?      @relation("blog_posts", fields: [microblogId], references: [id])
   microblogId Int?
 }
@@ -34,9 +30,8 @@ model Post {
 model Comments {
   id         Int        @id 
   text       String?
-  createdAt  DateTime   @default(now())
-  updatedAt  DateTime   @updatedAt
   likes      Int        @default(0)
-  post       Post       @relation("post_comments", fields: [postId], references: [id])
-  postId     Int
+  date      DateTime   @default(now())
+  post       Post?       @relation("post_comments", fields: [postId], references: [id])
+  postId     Int?
 }
